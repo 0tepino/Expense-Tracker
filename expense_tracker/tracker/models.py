@@ -13,5 +13,5 @@ class Expense(models.Model):
     description = models.TextField(blank=True)
     date = models.DateField(auto_now_add=True)
 
-def __str__(self):
-    return f"{self.category}: {self.amount}"
+    def __str__(self):
+        return f"{self.category}: ${self.amount} on {self.date}"
